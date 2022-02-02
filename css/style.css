@@ -1,0 +1,73 @@
+@import "null.css";
+
+/* Обращаемся ко всему    +++++++++++++*/
+* {
+	color: rgb(0, 0, 0);
+}
+/* Селектор класса +++++++++++++++ */
+.wrapper {
+	background-color: #eee2dc;
+}
+.year {
+	color: green;
+}
+/* Селектор ID ++++++++++++ */
+#logo p span {
+	color: red;
+}
+/* Все объекты c классами main-header и text ОДНОВРЕМЕННО  ++++++++++++++++++++++++++++*/
+/* Этот приоритетней */
+.main-header.text {
+	color: yellow;
+}
+
+/* Все объекты DIV c классом main-subtitle с тегом р +++++++++++++++++++++++++++++++*/
+div.main-subtitle p {
+	color: violet;
+}
+
+/* Селектор тега ++++++++++++++++++*/
+
+span {
+	color: green;
+}
+/* Используем селектор атрибута ++++++++++++++++++++*/
+[class="menu-list"] {
+	color: green;
+}
+
+[class*="-text"] {
+	color: yellow;
+}
+
+/* Комплексные селекторы++++++++++++++++++++++++ */
+/* Перечисление */
+.first,
+.second {
+	color: red;
+}
+/* Только первый уровень вложенности ++++++++++++++++++++*/
+.section > p {
+	color: hotpink;
+}
+/*next-object of the same lavel*/
+/* Обращаемся ко всем следующим объектам того же уровня */
+
+/* ++++++++++++++++++ */
+.next-object + p {
+	color: blue;
+}
+
+section .next-text {
+	color: red;
+}
+
+div.footer {
+	color: red;
+}
+.year {
+}
+/* Обращаемся ко всем следующим объектам того же уровня */
+.second-object ~ p {
+	color: gold;
+}
